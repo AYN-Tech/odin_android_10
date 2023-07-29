@@ -1,1 +1,4 @@
 bootanimation.zip filter=lfs diff=lfs merge=lfs -text
+large.code_coverage filter=lfs diff=lfs merge=lfs -text
+large.verbose_cfg filter=lfs diff=lfs merge=lfs -text
+gradle-api-3.5-20170307000048+0000.jar filter=lfs diff=lfs merge=lfs -text
