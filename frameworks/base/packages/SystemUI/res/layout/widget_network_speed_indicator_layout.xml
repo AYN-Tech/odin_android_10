@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@*android:dimen/status_bar_height"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/post_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-4dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="0.0 k/s"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/post_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text=" △ "
+            android:layout_marginBottom="-5dp"
+            android:textSize="6sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/download_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-3dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="0.0 k/s"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/download_icon_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-4dp"
+            android:includeFontPadding="false"
+            android:text=" ▽ "
+            android:textSize="6sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
