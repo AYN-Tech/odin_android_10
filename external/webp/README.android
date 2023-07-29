@@ -1,0 +1,16 @@
+URL: https://chromium.googlesource.com/webm/libwebp
+Version: v1.0.2
+License: Google BSD like
+
+Local modifications:
+- Copy public headers from src/webp to include/webp, so path to headers
+  may be appended into CFLAGS without risk for other private headers
+  (e.g. bits.h) to leak into
+- Removed build files necessary for building via autoconf/automake tools
+  These files are not required to build via Android.bp
+- cherry-pick ab2dc893 Rescaler: fix rounding error
+- cherry-pick aa65f89a HistogramCombineStochastic: fix free of uninit value
+
+The Android.bp file creates WebP decoder and encoder static libraries which
+can be added to any application by adding libwebp-decode and libwebp-encode to
+'static_libs'.
