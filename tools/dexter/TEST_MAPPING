@@ -1,0 +1,15 @@
+{
+  "postsubmit": [
+    {
+      "name": "CtsInlineMockingTestCases"
+    },
+    {
+      "name": "CtsExtendedMockingTestCases"
+    }
+  ],
+  "imports": [
+    {
+      "path": "cts/hostsidetests/jvmti"
+    }
+  ]
+}
