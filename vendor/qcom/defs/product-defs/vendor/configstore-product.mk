@@ -1,0 +1,1 @@
+../../../proprietary/configstore/configstore-product.mk

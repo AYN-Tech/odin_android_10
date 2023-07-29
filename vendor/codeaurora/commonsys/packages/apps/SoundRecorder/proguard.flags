@@ -1,0 +1,2 @@
+#Avoid the library class dependency error
+-dontwarn android.support.v7.recyclerview.*

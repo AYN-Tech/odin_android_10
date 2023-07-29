@@ -1,0 +1,14 @@
+META/boot_filesystem_config.txt
+META/file_contexts.bin
+META/otakeys.txt
+META/releasetools.py
+META/vendor_filesystem_config.txt
+META/vendor_manifest.xml
+META/vendor_matrix.xml
+BOOT/*
+DATA/*
+ODM/*
+OTA/android-info.txt
+PREBUILT_IMAGES/*
+RADIO/*
+VENDOR/*

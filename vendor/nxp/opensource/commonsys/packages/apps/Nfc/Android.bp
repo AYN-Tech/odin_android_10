@@ -1,0 +1,20 @@
+// NCI Configuration
+//ALLOW_MISSING_DEPENDENCIES = ["true"]
+android_app {
+    name: "NQNfcNci",
+    srcs: [
+        "src/**/*.java",
+        "nci/**/*.java",
+    ],
+    platform_apis: true,
+    certificate: "platform",
+    jni_libs: ["libsn100nfc_nci_jni"],
+    libs: ["com.nxp.nfc.nq"],
+    static_libs: [
+        "android-support-core-utils",
+        "vendor.nxp.hardware.nfc-V1.1-java",
+        ],
+    optimize: {
+        enabled: false,
+    },
+}

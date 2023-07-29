@@ -1,0 +1,1 @@
+../../../proprietary/commonsys-intf/wfd/configs/wfd-ship-product-defs-system.mk

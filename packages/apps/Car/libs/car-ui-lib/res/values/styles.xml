@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2019 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Styles for CarUi tab view -->
+
+    <style name="Widget.CarUi" parent="android:Widget.DeviceDefault"/>
+
+    <style name="Widget.CarUi.Button.Borderless.Colored"
+           parent="android:Widget.DeviceDefault.Button.Borderless.Colored"/>
+
+    <style name="Widget.CarUi.Button" parent="android:Widget.DeviceDefault.Button"/>
+
+    <style name="Widget.CarUi.Toolbar"/>
+
+    <style name="Widget.CarUi.Toolbar.Container"/>
+
+    <style name="Widget.CarUi.Toolbar.NavIconContainer"/>
+
+    <style name="Widget.CarUi.Toolbar.Logo"/>
+
+    <style name="Widget.CarUi.Toolbar.LogoContainer">
+        <item name="android:paddingEnd">@dimen/car_ui_toolbar_title_logo_padding</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.ProgressBar"
+           parent="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal">
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.NavIcon">
+        <item name="android:tint">@color/car_ui_toolbar_nav_icon_color</item>
+        <item name="android:src">@drawable/car_ui_icon_arrow_back</item>
+        <item name="android:background">@drawable/car_ui_toolbar_menu_item_icon_ripple</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.Title">
+        <item name="android:layout_marginStart">@dimen/car_ui_toolbar_title_margin_start</item>
+        <item name="android:textAppearance">@style/TextAppearance.CarUi.Widget.Toolbar.Title</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.TextButton" parent="Widget.CarUi.Button.Borderless.Colored">
+        <item name="android:drawableTint">@color/car_ui_toolbar_menu_item_icon_color</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.TextButton.WithIcon">
+        <item name="android:textColor">@color/car_ui_toolbar_menu_item_icon_color</item>
+    </style>
+
+    <!-- Style applied to the decoration view between toolbar rows -->
+    <style name="Widget.CarUi.Toolbar.SeparatorView">
+        <item name="android:height">0.01dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Style applied to the decoration view below the toolbar -->
+    <style name="Widget.CarUi.Toolbar.BottomView">
+        <item name="android:height">0.01dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.MenuItem.Container" parent="@style/Widget.CarUi.Toolbar">
+        <item name="android:divider">@drawable/car_ui_toolbar_menu_item_divider</item>
+        <item name="android:showDividers">beginning|middle|end</item>
+    </style>
+
+    <!-- Style applied to the edit box inside the toolbar search area -->
+    <style name="Widget.CarUi.Toolbar.Search.EditText"
+        parent="android:Widget.DeviceDefault.EditText"/>
+
+    <style name="Widget.CarUi.Toolbar.Search.SearchIcon" parent="Widget.CarUi.Toolbar"/>
+
+    <style name="Widget.CarUi.Toolbar.Search.CloseIcon" parent="Widget.CarUi.Toolbar">
+        <item name="android:background">@drawable/car_ui_toolbar_menu_item_icon_ripple</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.Tab"/>
+
+    <style name="Widget.CarUi.Toolbar.Tab.Container">
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">@dimen/car_ui_toolbar_tab_padding_x</item>
+        <item name="android:paddingEnd">@dimen/car_ui_toolbar_tab_padding_x</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.Tab.Icon">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:tint">@color/car_ui_toolbar_tab_item_selector</item>
+        <item name="android:tintMode">src_in</item>
+    </style>
+
+    <style name="Widget.CarUi.Toolbar.Tab.Text">
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.CarUi.Widget.Toolbar.Tab</item>
+    </style>
+
+    <style name="Widget.CarUi.CarUiRecyclerView">
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <style name="Widget.CarUi.CarUiRecyclerView.NestedRecyclerView">
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="Widget.CarUi.AlertDialog"/>
+
+    <style name="Widget.CarUi.AlertDialog.HeaderContainer">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">18dp</item>
+    </style>
+
+    <style name="Widget.CarUi.AlertDialog.TitleContainer">
+        <item name="android:layout_marginStart">@dimen/car_ui_dialog_title_margin</item>
+        <item name="android:layout_marginEnd">@dimen/car_ui_dialog_title_margin</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Widget.CarUi.AlertDialog.Icon">
+        <item name="android:layout_marginStart">@dimen/car_ui_dialog_title_margin</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- Preference Styles -->
+
+    <style name="Preference.CarUi">
+        <item name="android:layout">@layout/car_ui_preference</item>
+    </style>
+
+    <style name="Preference.CarUi.Category">
+        <item name="android:layout">@layout/car_ui_preference_category</item>
+        <!-- The title should not dim if the category is disabled, instead only the preference children should dim. -->
+        <item name="android:shouldDisableView">false</item>
+        <item name="android:selectable">false</item>
+    </style>
+
+    <style name="Preference.CarUi.CheckBoxPreference">
+        <item name="android:widgetLayout">@layout/car_ui_preference_widget_checkbox</item>
+    </style>
+
+    <style name="Preference.CarUi.DialogPreference">
+        <item name="android:positiveButtonText">@string/car_ui_dialog_preference_positive</item>
+        <item name="android:negativeButtonText">@string/car_ui_dialog_preference_negative</item>
+    </style>
+
+    <style name="Preference.CarUi.DialogPreference.EditTextPreference">
+        <item name="android:dialogLayout">@layout/car_ui_preference_dialog_edittext</item>
+    </style>
+
+    <style name="Preference.CarUi.DropDown">
+        <item name="android:layout">@layout/car_ui_preference_dropdown</item>
+    </style>
+
+    <style name="Preference.CarUi.Icon"/>
+
+    <style name="Preference.CarUi.Information">
+        <item name="android:enabled">false</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+
+    <style name="Preference.CarUi.Preference"/>
+
+    <style name="Preference.CarUi.PreferenceScreen"/>
+
+    <style name="Preference.CarUi.SeekBarPreference">
+        <item name="android:layout">@layout/car_ui_preference_widget_seekbar</item>
+        <item name="adjustable">true</item>
+        <item name="showSeekBarValue">false</item>
+    </style>
+
+    <style name="Preference.CarUi.SwitchPreference">
+        <item name="android:widgetLayout">@layout/car_ui_preference_widget_switch</item>
+        <item name="android:switchTextOn">@string/car_ui_preference_switch_on</item>
+        <item name="android:switchTextOff">@string/car_ui_preference_switch_off</item>
+    </style>
+
+    <style name="PreferenceFragment.CarUi">
+        <item name="android:divider">?android:attr/listDivider</item>
+        <item name="android:layout">@layout/car_ui_preference_fragment</item>
+    </style>
+
+    <style name="PreferenceFragmentList.CarUi">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+    <!-- TextAppearance -->
+
+    <style name="TextAppearance.CarUi" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.PreferenceCategoryTitle">
+        <item name="android:fontFamily">@string/car_ui_preference_category_title_font_family</item>
+        <item name="android:textColor">@color/car_ui_preference_category_title_text_color</item>
+        <item name="android:textSize">@dimen/car_ui_preference_category_text_size</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.PreferenceSummary">
+        <item name="android:textColor">@color/car_ui_preference_summary_text_color</item>
+        <item name="android:textSize">@dimen/car_ui_preference_summary_text_size</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.PreferenceTitle">
+        <item name="android:textColor">@color/car_ui_preference_title_text_color</item>
+        <item name="android:textSize">@dimen/car_ui_preference_title_text_size</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.PreferenceEditTextDialogMessage">
+        <item name="android:textColor">@color/car_ui_preference_edit_text_dialog_message_text_color</item>
+        <item name="android:textSize">@dimen/car_ui_preference_edit_text_dialog_message_text_size</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.AlertDialog.Subtitle" parent="android:TextAppearance.DeviceDefault"/>
+
+    <style name="TextAppearance.CarUi.Widget" parent="android:TextAppearance.DeviceDefault.Widget"/>
+
+    <style name="TextAppearance.CarUi.Widget.Toolbar"/>
+
+    <style name="TextAppearance.CarUi.Widget.Toolbar.Title">
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">@dimen/car_ui_letter_spacing_body1</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.Widget.Toolbar.Tab">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">@dimen/car_ui_letter_spacing_body3</item>
+        <item name="android:textColor">@color/car_ui_toolbar_tab_item_selector</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.Widget.Toolbar.Tab.Selected">
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.ListItem.Header">
+        <item name="android:fontFamily">@string/car_ui_list_item_header_font_family</item>
+        <item name="android:textColor">@color/car_ui_list_item_header_text_color</item>
+        <item name="android:textSize">@dimen/car_ui_list_item_header_text_size</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.ListItem">
+        <item name="android:textColor">@color/car_ui_list_item_title_text_color</item>
+        <item name="android:textSize">@dimen/car_ui_list_item_title_text_size</item>
+    </style>
+
+    <style name="TextAppearance.CarUi.ListItem.Body">
+        <item name="android:textSize">@dimen/car_ui_list_item_body_text_size</item>
+        <item name="android:textColor">@color/car_ui_list_item_body_text_color</item>
+    </style>
+
+</resources>

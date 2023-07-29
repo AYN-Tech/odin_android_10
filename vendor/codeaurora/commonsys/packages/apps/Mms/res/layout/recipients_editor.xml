@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="9dip"
+        android:layout_marginTop="15dip"
+        android:orientation="horizontal">
+        <com.android.mms.ui.MaxHeightScrollView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:maxHeight="@dimen/compose_message_chips_view_max_height">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.android.mms.ui.RecipientsEditor
+                    android:id="@+id/recipients_editor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="5dip"
+                    android:hint="@string/to_hint"
+                    android:fontFamily="sans-serif"
+                    android:textColorHint="#7fffffff"
+                    android:textSize="16sp"
+                    android:background="@drawable/underline_white"
+                    android:textColor="@color/recipient_editor_text_color"
+                    android:layout_gravity="bottom"
+                    android:textCursorDrawable="@null"
+                    android:nextFocusRight="@+id/recipients_selector" />
+            </LinearLayout>
+        </com.android.mms.ui.MaxHeightScrollView>
+
+        <ImageButton android:id="@+id/recipients_picker"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/add_person"
+            android:layout_marginRight="16dip"
+            android:layout_width="24dip"
+            android:layout_gravity="right"
+            android:layout_height="24dip"/>
+
+        <ImageButton android:id="@+id/clear"
+                     android:background="?android:attr/selectableItemBackgroundBorderless"
+                     style="?android:attr/borderlessButtonStyle"
+                     android:src="@drawable/clear"
+                     android:layout_marginRight="16dip"
+                     android:layout_width="24dip"
+                     android:layout_gravity="right"
+                     android:layout_height="24dip"/>
+
+    </LinearLayout>
+</LinearLayout>

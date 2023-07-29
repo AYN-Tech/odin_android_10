@@ -1,0 +1,1 @@
+../../../proprietary/android-perf/configs/perf-product-vendor.mk

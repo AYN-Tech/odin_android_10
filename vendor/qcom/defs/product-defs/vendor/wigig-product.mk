@@ -1,0 +1,1 @@
+../../../proprietary/wigig/wigig_product.mk

@@ -1,0 +1,16 @@
+cc_library_shared {
+    name: "vendor.nxp.hardware.nfc@1.0-impl",
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [
+        "NqNfc.cpp",
+    ],
+    shared_libs: [
+        "liblog",
+        "libhardware",
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "vendor.nxp.hardware.nfc@1.0",
+    ],
+}

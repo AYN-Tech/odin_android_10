@@ -1,0 +1,7 @@
+type ftmdaemon, domain;
+type ftmdaemon_exec, exec_type, vendor_file_type,file_type;
+
+# Started by init
+init_daemon_domain(ftmdaemon)
+
+

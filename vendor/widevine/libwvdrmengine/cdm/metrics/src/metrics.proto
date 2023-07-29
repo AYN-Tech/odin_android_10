@@ -1,0 +1,247 @@
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
+// This file contains a proto definition for serialization of metrics data.
+//
+syntax = "proto2";
+
+package drm_metrics;
+
+// need this if we are using libprotobuf-cpp-2.3.0-lite
+option optimize_for = LITE_RUNTIME;
+
+// The Attributes message is used to contain values associated with the
+// metric that was captured.  E.g. if we're capturing a counter value, the
+// Attributes will contain the values assocated with that counter. E.g. we may
+// want to count all of the operations with a give error code.
+message Attributes {
+  // Reserved for compatibility with logging proto.
+  // TODO(blueeyes): The reserved keyword is not supported in the older version
+  // of protoc in the CE CDM third_party directory. Uncomment the reserved
+  // line when we upgrade. b/67016366.
+  // reserved 8, 10 to 13;
+
+  // The error code. See CdmResponseType in wv_cdm_types.h
+  optional int32 error_code = 1;
+  // The status of the processed data. Some methods has a bool error code
+  // rather than a CdmResponseType error code. True if it succeeds, and
+  // false if it fails.
+  optional bool error_code_bool = 2;
+  // The CdmSecurityLevel. Defined in wv_cdm_types.h
+  optional uint32 cdm_security_level = 3;
+  // The SecurityLevel. Defined in wv_cdm_types.h.
+  optional uint32 security_level = 4;
+  // The length in bytes.
+  optional uint64 length = 5;
+  // The CDM encryption algorithm. It can be "AES-CBC-128" or unknown. See
+  // CdmEncryptionAlgorithm in wv_cdm_types.h
+  optional uint32 encryption_algorithm = 6;
+  // The CDM signing algorithm. It can be "HMACSHA256" or unknown. See
+  // CdmSigningAlgorithm in wv_cdm_types.h
+  optional uint32 signing_algorithm = 7;
+  // The OEM crypto result. See OEMCryptoResult in OEMCryptoCENC.h
+  optional int32 oem_crypto_result = 9;
+  // Defined at ::android::hardware::drm::V1_0::KeyStatusType;
+  optional uint32 key_status_type = 14;
+  // Defined at ::android::hardware::drm::V1_0::EventType;
+  optional uint32 event_type = 15;
+  // Contains the CdmKeyRequestType defined in wv_cdm_types.h.
+  optional uint32 key_request_type = 16;
+  // Contains the CdmLicenseType defined in wv_cdm_types.h.
+  optional uint32 license_type = 17;
+  // Error detail supplemental to the error_code field.
+  optional int32 error_detail = 18;
+}
+
+// The Counter message is used to store a count value with an associated
+// Attribute.
+message CounterMetric {
+  optional int64 count = 1;
+  // Represents the attributes associated with this counter instance.
+  optional Attributes attributes = 2;
+}
+
+// The DistributionMetric is meant to capture the moments of a normally
+// distributed (or approximately normal) value.
+message DistributionMetric {
+  optional float min = 1;
+  optional float max = 2;
+  optional float mean = 3;
+  optional double variance = 4;
+  optional uint64 operation_count = 5;
+
+  // Represents the attributes assocated with this distribution metric
+  // instance.
+  optional Attributes attributes = 6;
+}
+
+// ValueMetric represents either a single value or an error.
+message ValueMetric {
+  // Only one of the following values should be set for the given metric.
+  optional int32 error_code = 1;
+  optional int64 int_value = 2;
+  optional double double_value = 3;
+  optional string string_value = 4;
+}
+
+
+// This message contains the specific metrics captured by DrmMetrics. It is
+// used for serializing and logging metrics.
+// next id: 3.
+message WvCdmMetrics {
+  // Attributes are associated with a recorded value. E.g. A counter may
+  // represent a count of an operation returning a specific error code. The
+  // error code will be an attribute.
+
+  // This contains metrics that were captured at the CryptoSession level. These
+  // include CryptoSession metrics and most OEMCrypto metrics.
+  // next id: 73
+  message CryptoMetrics {
+    // Crypto Session Metrics.
+    optional ValueMetric crypto_session_security_level = 1;
+    repeated CounterMetric crypto_session_delete_all_usage_reports = 2;
+    repeated CounterMetric crypto_session_delete_multiple_usage_information = 3;
+    repeated DistributionMetric crypto_session_generic_decrypt_time_us = 4;
+    repeated DistributionMetric crypto_session_generic_encrypt_time_us = 5;
+    repeated DistributionMetric crypto_session_generic_sign_time_us = 6;
+    repeated DistributionMetric crypto_session_generic_verify_time_us = 7;
+    repeated CounterMetric crypto_session_get_device_unique_id = 8;
+    repeated CounterMetric crypto_session_get_token = 9;
+    optional ValueMetric crypto_session_life_span = 10;
+    repeated DistributionMetric crypto_session_load_certificate_private_key_time_us = 11;
+    repeated DistributionMetric crypto_session_open_time_us = 12;
+    optional ValueMetric crypto_session_system_id = 13;
+    repeated DistributionMetric crypto_session_update_usage_information_time_us = 14;
+    optional ValueMetric crypto_session_usage_information_support = 15;
+
+    // Usage Table Metrics
+    optional ValueMetric usage_table_header_initial_size = 58;
+    repeated CounterMetric usage_table_header_add_entry = 59;
+    repeated CounterMetric usage_table_header_delete_entry = 60;
+    repeated DistributionMetric usage_table_header_update_entry_time_us = 56;
+    repeated CounterMetric usage_table_header_load_entry = 61;
+
+    // OemCrypto metrics.
+    optional ValueMetric oemcrypto_api_version = 16;
+    repeated CounterMetric oemcrypto_close_session = 17;
+    repeated DistributionMetric oemcrypto_copy_buffer_time_us = 18;
+    optional ValueMetric oemcrypto_current_hdcp_capability = 19;
+    repeated CounterMetric oemcrypto_deactivate_usage_entry = 20;
+    repeated DistributionMetric oemcrypto_decrypt_cenc_time_us = 21;
+    repeated CounterMetric oemcrypto_delete_usage_entry = 22;
+    repeated CounterMetric oemcrypto_delete_usage_table = 23;
+    repeated DistributionMetric oemcrypto_derive_keys_from_session_key_time_us = 24;
+    repeated CounterMetric oemcrypto_force_delete_usage_entry = 25;
+    repeated DistributionMetric oemcrypto_generate_derived_keys_time_us = 26;
+    repeated CounterMetric oemcrypto_generate_nonce = 27;
+    repeated DistributionMetric oemcrypto_generate_rsa_signature_time_us = 28;
+    repeated DistributionMetric oemcrypto_generate_signature_time_us = 29;
+    repeated DistributionMetric oemcrypto_generic_decrypt_time_us = 30;
+    repeated DistributionMetric oemcrypto_generic_encrypt_time_us = 31;
+    repeated DistributionMetric oemcrypto_generic_sign_time_us = 32;
+    repeated DistributionMetric oemcrypto_generic_verify_time_us = 33;
+    repeated CounterMetric oemcrypto_get_device_id = 34;
+    repeated DistributionMetric oemcrypto_get_key_data_time_us = 35;
+    repeated CounterMetric oemcrypto_get_oem_public_certificate = 36;
+    repeated CounterMetric oemcrypto_get_random = 37;
+    repeated DistributionMetric oemcrypto_initialize_time_us = 38;
+    optional ValueMetric oemcrypto_is_anti_rollback_hw_present = 39;
+    optional ValueMetric oemcrypto_is_keybox_valid = 40;
+    repeated DistributionMetric oemcrypto_load_device_rsa_key_time_us = 41;
+    repeated DistributionMetric oemcrypto_load_entitled_keys_time_us = 42;
+    repeated DistributionMetric oemcrypto_load_keys_time_us = 43;
+    optional ValueMetric oemcrypto_max_hdcp_capability = 44;
+    optional ValueMetric oemcrypto_max_number_of_sessions = 45;
+    optional ValueMetric oemcrypto_number_of_open_sessions = 46;
+    optional ValueMetric oemcrypto_provisioning_method = 47;
+    repeated DistributionMetric oemcrypto_refresh_keys_time_us = 48;
+    repeated CounterMetric oemcrypto_report_usage = 49;
+    repeated DistributionMetric oemcrypto_rewrap_device_rsa_key_time_us = 50;
+    repeated DistributionMetric oemcrypto_rewrap_device_rsa_key_30_time_us = 51;
+    optional ValueMetric oemcrypto_security_patch_level = 52;
+    repeated DistributionMetric oemcrypto_select_key_time_us = 53;
+    optional ValueMetric oemcrypto_usage_table_support = 54;
+    repeated CounterMetric oemcrypto_update_usage_table = 55;
+    repeated CounterMetric oemcrypto_update_usage_entry = 57;
+    repeated CounterMetric oemcrypto_create_usage_table_header = 62;
+    repeated CounterMetric oemcrypto_load_usage_table_header = 63;
+    repeated CounterMetric oemcrypto_shrink_usage_table_header = 64;
+    repeated CounterMetric oemcrypto_create_new_usage_entry = 65;
+    repeated CounterMetric oemcrypto_load_usage_entry = 66;
+    repeated CounterMetric oemcrypto_move_entry = 67;
+    repeated CounterMetric oemcrypto_create_old_usage_entry = 68;
+    repeated CounterMetric oemcrypto_copy_old_usage_entry = 69;
+    optional ValueMetric oemcrypto_set_sandbox = 70;
+    repeated CounterMetric oemcrypto_set_decrypt_hash = 71;
+    optional ValueMetric oemcrypto_resource_rating_tier = 72;
+  }
+
+  // This contains metrics that were captured within a CdmSession. This contains
+  // nested CryptoMetrics that were captured in the context of the session.
+  // next id: 9
+  message SessionMetrics {
+    optional ValueMetric session_id = 1;
+    optional CryptoMetrics crypto_metrics = 2;
+    optional ValueMetric cdm_session_life_span_ms = 3;
+    repeated DistributionMetric cdm_session_renew_key_time_us = 4;
+    repeated CounterMetric cdm_session_restore_offline_session = 5;
+    repeated CounterMetric cdm_session_restore_usage_session = 6;
+    repeated DistributionMetric cdm_session_license_request_latency_ms = 7;
+    optional ValueMetric oemcrypto_build_info = 8;
+    optional ValueMetric license_sdk_version = 9;
+    optional ValueMetric license_service_version = 10;
+  }
+
+  // These are metrics recorded at the Engine level. This includes CryptoSession
+  // metrics that were captured in the context of the engine.
+  // next id: 31
+  message EngineMetrics {
+    optional CryptoMetrics crypto_metrics = 1;
+
+    // OEMCrypto Initialize Metrics.
+    optional ValueMetric oemcrypto_initialization_mode = 3;
+    optional ValueMetric oemcrypto_l1_api_version = 4;
+    optional ValueMetric oemcrypto_l1_min_api_version = 5;
+    // CdmEngine Metrics.
+    optional ValueMetric app_package_name = 6;
+    repeated DistributionMetric cdm_engine_add_key_time_us = 7;
+    optional ValueMetric cdm_engine_cdm_version = 8;
+    repeated CounterMetric cdm_engine_close_session = 9;
+    optional ValueMetric cdm_engine_creation_time_millis = 10;
+    repeated DistributionMetric cdm_engine_decrypt_time_us = 11;
+    repeated CounterMetric cdm_engine_find_session_for_key = 12;
+    repeated DistributionMetric cdm_engine_generate_key_request_time_us = 13;
+    repeated DistributionMetric cdm_engine_get_provisioning_request_time_us = 14;
+    repeated CounterMetric cdm_engine_get_secure_stop_ids = 15;
+    repeated DistributionMetric cdm_engine_get_usage_info_time_us = 16;
+    repeated DistributionMetric cdm_engine_handle_provisioning_response_time_us = 17;
+    optional ValueMetric cdm_engine_life_span_ms = 18;
+    repeated CounterMetric cdm_engine_open_key_set_session = 19;
+    repeated CounterMetric cdm_engine_open_session = 20;
+    repeated DistributionMetric cdm_engine_query_key_status_time_us = 21;
+    repeated CounterMetric cdm_engine_release_all_usage_info = 22;
+    repeated CounterMetric cdm_engine_release_usage_info = 23;
+    repeated CounterMetric cdm_engine_remove_all_usage_info = 24;
+    repeated CounterMetric cdm_engine_remove_keys = 25;
+    repeated CounterMetric cdm_engine_remove_usage_info = 26;
+    repeated DistributionMetric cdm_engine_restore_key_time_us = 27;
+    repeated CounterMetric cdm_engine_unprovision = 28;
+    // OEMCrypto Initialize Metrics.
+    optional ValueMetric level3_oemcrypto_initialization_error = 29;
+    optional ValueMetric previous_oemcrypto_initialization_failure = 30;
+  }
+
+  optional EngineMetrics engine_metrics = 1;
+  repeated SessionMetrics session_metrics = 2;
+}
+
+// This message contains a collection of metrics, one per CDM engine instance.
+message WvCdmMetricsGroup {
+  repeated WvCdmMetrics metrics = 1;
+}
+
+// Test message to support unit testing.
+message TestMetrics{
+  optional ValueMetric test_value_metric = 1;
+  repeated CounterMetric test_counters = 3;
+  repeated DistributionMetric test_distributions = 2;
+}

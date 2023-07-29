@@ -1,0 +1,1 @@
+../../../proprietary/dspservices_ship/contexthub_system_product.mk

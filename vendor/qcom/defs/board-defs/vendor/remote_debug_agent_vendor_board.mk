@@ -1,0 +1,1 @@
+../../../proprietary/dspservices_ship/remote_debug_agent_vendor_board.mk

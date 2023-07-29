@@ -1,0 +1,96 @@
+# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type qcom_ims_prop, property_type;
+type vendor_dataadpl_prop, property_type;
+type vendor_ipacm-diag_prop, property_type;
+type cnd_vendor_prop, property_type;
+type spcomlib_prop, property_type;
+type vendor_qdma_prop, property_type;
+type vendor_mdm_helper_prop, property_type;
+type vendor_disable_spu_prop, property_type;
+
+# boot mode property
+type vendor_boot_mode_prop, property_type;
+
+#mpctl
+type vendor_mpctl_prop, property_type;
+type freq_prop, property_type;
+#service opts
+type bservice_prop, property_type;
+type reschedule_service_prop, property_type;
+type vendor_cgroup_follow_prop, property_type;
+type vendor_scroll_prop, property_type;
+
+type vendor_qspm_prop, property_type;
+#iop
+type vendor_iop_prop, property_type;
+
+#properties for nfc
+type vendor_nfc_nq_prop, property_type;
+
+# factory properties
+type ctl_vendor_mmid_prop, property_type;
+
+# mmi
+type vendor_mmi_prop, property_type;
+
+#mm-video
+type vendor_video_prop, property_type;
+
+# Audio debug props
+type vendor_audio_debug_prop, property_type;
+
+# Seccam Prop
+type vendor_core_ctl_prop, property_type;
+
+# property for location
+type location_prop, property_type;
+
+# Netmgrd prop
+type vendor_data_ko_prop, property_type;
+# WIGIG
+type vendor_wigig_prop, property_type;
+type ctl_vendor_wigigsvc_prop, property_type;
+
+# hvdcp_opti prop
+type vendor_hvdcp_opti_prop, property_type;
+
+# property for coresight
+type vendor_coresight_prop, property_type;
+
+# property for xlat
+type vendor_xlat_prop, property_type;
+
+#qvr property
+type vendor_qvr_prop, property_type;
+
+#qmuxd property
+type ctl_qmuxd_prop, property_type;
+
+#slm property
+type slm_prop, property_type;

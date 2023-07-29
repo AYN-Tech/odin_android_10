@@ -1,0 +1,1 @@
+../../../proprietary/commonsys/wigig/wigig_product.mk

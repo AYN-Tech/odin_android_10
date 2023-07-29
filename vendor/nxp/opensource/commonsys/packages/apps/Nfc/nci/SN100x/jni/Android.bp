@@ -1,0 +1,45 @@
+cc_library_shared {
+    name: "libsn100nfc_nci_jni",
+
+    cflags:
+     ["-DNXP_EXTNS=TRUE"]  + [
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-Werror",
+    ],
+    srcs: ["**/*.cpp"],
+
+    include_dirs: [
+        "external/libxml2/include",
+        "frameworks/native/include",
+        "vendor/nxp/opensource/commonsys/external/libnfc-nci/SN100x/src/include",
+        "vendor/nxp/opensource/commonsys/external/libnfc-nci/SN100x/src/nfa/include",
+        "vendor/nxp/opensource/commonsys/external/libnfc-nci/SN100x/src/nfc/include",
+        "vendor/nxp/opensource/commonsys/external/libnfc-nci/SN100x/src/gki/ulinux",
+        "vendor/nxp/opensource/commonsys/external/libnfc-nci/SN100x/src/gki/common",
+    ] + ["vendor/nxp/opensource/commonsys/external/libnfc-nci/SN100x/utils/include"],
+
+    local_include_dirs: [
+        "extns/pn54x/inc",
+        "extns/pn54x/src/common",
+        "extns/pn54x/src/mifare",
+        "extns/pn54x/src/log",
+    ],
+    shared_libs: [
+        "libandroidicu",
+        "libnativehelper",
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libsn100nfc-nci",
+        "libchrome",
+        "libbase",
+    ],
+    product_variables: {
+        debuggable: {
+            cflags: ["-DDCHECK_ALWAYS_ON"],
+        },
+    },
+    static_libs: ["libxml2"],
+}

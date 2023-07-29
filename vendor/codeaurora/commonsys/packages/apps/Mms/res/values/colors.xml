@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2007-2008 Esmertec AG.
+ * Copyright (C) 2007-2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources>
+    <!-- Activity background color -->
+    <drawable name="class_zero_background">#7f040000</drawable>
+
+    <!-- text color -->
+    <drawable name="text_color_red">#ffff4444</drawable>
+    <drawable name="text_color_black">#ff000000</drawable>
+    <color name="text_hairline">#ffcccccc</color>
+    <color name="message_count_color">#66333333</color>
+
+    <!-- Chat "sent time" text background -->
+    <color name="timestamp_color">#bf000000</color>
+
+    <!-- the background color used for unread conversation -->
+    <color name="unread_bgcolor">#ffffffff</color>
+    <color name="read_bgcolor">#ffeeeeee</color>
+
+    <color name="widget_sender_text_color_read">#555555</color>
+    <color name="widget_sender_text_color_unread">#333333</color>
+    <color name="widget_subject_text_color_read">#777777</color>
+    <color name="widget_subject_text_color_unread">#555555</color>
+
+    <color name="translucent_white">#ccffffff</color>
+    <color name="transparent_white">#00ffffff</color>
+    <color name="default_white">#ffffff</color>
+
+    <color name="transparent_black">#73000000</color>
+
+    <color name="banner_item_transparent">#00000000</color>
+    <color name="banner_item_activated">#670099cc</color>
+    <color name="banner_item_selected">#cc0099cc</color>
+    <color name="banner_item_pressed">#6733b5e5</color>
+
+    <color name="text_shadow_color_light">#33000000</color>
+    <color name="solid_white">#ffffffff</color>
+
+    <color name="slot_indicator_background">#737373</color>
+
+    <!-- material theme colors -->
+    <color name="mms_theme_color">#00ACC1</color>
+    <color name="mms_theme_color_dark">#0097A7</color>
+    <color name="mms_theme_color_accent">#00BCD4</color>
+
+    <color name="actionbar_background_color">@color/mms_theme_color</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="gray">#dcdcdc</color>
+
+    <color name="black">#000000</color>
+    <color name="gray2">#ededed</color>
+    <color name="gray5">#e0e0e0</color>
+
+    <color name="background_color">#fafafa</color>
+    <color name="default_actionabr_background">#0288d1</color>
+    <color name="action_mode_background">#ffffff</color>
+    <color name="conversation_item_selected">#ffc5c5c5</color>
+    <color name="conversation_item_text_color">#d8000000</color>
+    <color name="conversation_item_fail_text_color">#f44336</color>
+    <color name="statubar_select_background">#A9A9A9</color>
+    <color name="primary_color_dark">#0277bd</color>
+    <color name="input_bar">#f5f5f5</color>
+    <color name="recipient_editor_text_color">#7fffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="send_color">#0288d1</color>
+    <color name="send_color_unenable">#e53935</color>
+    <color name="send_to_avatar_background_color">#607d8b</color>
+    <color name="underline_white">#21ffffff</color>
+    <color name="embedded_text_color">#d8000000</color>
+    <color name="embedded_hint_text_color">#7f000000</color>
+
+    <array name="letter_tile_colors">
+        <item>#DB4437</item>
+        <item>#E91E63</item>
+        <item>#9C27B0</item>
+        <item>#673AB7</item>
+        <item>#3F51B5</item>
+        <item>#4285F4</item>
+        <item>#039BE5</item>
+        <item>#0097A7</item>
+        <item>#009688</item>
+        <item>#0F9D58</item>
+        <item>#689F38</item>
+        <item>#EF6C00</item>
+        <item>#FF5722</item>
+        <item>#757575</item>
+    </array>
+
+    <array name="letter_tile_colors_dark">
+        <item>#C53929</item>
+        <item>#C2185B</item>
+        <item>#7B1FA2</item>
+        <item>#512DA8</item>
+        <item>#303F9F</item>
+        <item>#3367D6</item>
+        <item>#0277BD</item>
+        <item>#006064</item>
+        <item>#00796B</item>
+        <item>#0B8043</item>
+        <item>#33691E</item>
+        <item>#E65100</item>
+        <item>#E64A19</item>
+        <item>#424242</item>
+    </array>
+
+    <color name="quickcontact_default_photo_tint_color">#33691E</color>
+    <color name="quickcontact_default_photo_tint_color_dark">#455A64</color>
+    <color name="letter_tile_font_color">#ffffff</color>
+    <color name="avatar_default_color">#689F38</color>
+    <color name="avatar_background_default_color">#e53935</color>
+
+    <color name="compose_item_selected_background">#1789ce</color>
+    <color name="chips_dropdown_background_activated">#4285f4</color>
+    <color name="chips_dropdown_background_pressed">#ededed</color>
+    <color name="message_list_time_color">#8cffffff</color>
+
+    <color name="progress_background">#000000</color>
+    <color name="video_progress_bar">#0087D4</color>
+    <color name="video_timer_font">#aeaeae</color>
+    <color name="video_timer_font_color">#ffffff</color>
+    <color name="quick_reply_color">#cc000000</color>
+    <color name="full_screen_color">#de000000</color>
+    <color name="full_screen_accent_color">#cc00b8d4</color>
+
+    <color name="audio_duration_color_black">#86000000</color>
+    <color name="audio_duration_c0lor_white">#54ffffff</color>
+
+    <color name="notification_multi_icon_background_color">#0091ea</color>
+    <color name="notification_accent_color">#00a0e9</color>
+
+    <color name="searchbox_background_color">#ffffff</color>
+    <color name="searchbox_input_color">#db000000</color>
+    <color name="searchbox_hint_color">#42000000</color>
+</resources>

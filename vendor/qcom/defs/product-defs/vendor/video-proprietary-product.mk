@@ -1,0 +1,1 @@
+../../../proprietary/mm-video-utils/product.mk

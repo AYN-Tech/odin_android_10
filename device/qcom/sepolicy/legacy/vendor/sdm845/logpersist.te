@@ -1,0 +1,27 @@
+
+#type logcat, domain,coredomain;
+#type logcat_exec, exec_type, vendor_file_type, file_type;
+#init_daemon_domain(logcat)
+
+#domain_auto_trans(init, logcat_exec, logpersist)
+
+# Read from logd.
+#unix_socket_connect(logpersist, logdr, logd)
+
+# Write to /dev/ttyS2 and /dev/ttyGF2.
+#allow logpersist serial_device:chr_file { write open };
+#get_prop(logpersist, qemu_cmdline)
+#set_prop(logpersist, qemu_cmdline)
+
+allow  logpersist  vfat:dir  { write read open create };
+
+allow  logpersist  system_data_file:dir  { read open create };
+
+allow logpersist kernel:system syslog_read;
+allow logpersist kernel:system syslog_mod;
+
+allow logpersist init:unix_stream_socket connectto;
+#allow logpersist self:capability dac_override;
+allow logpersist self:capability2 syslog;
+
+

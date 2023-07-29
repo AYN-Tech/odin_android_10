@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2007, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- icon is used for albumart, the grabber in edit playlist mode,
+    and the playlist icon in the list of playlists -->
+
+    <GridLayout
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/iconTabbedView"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:background="#e1e1e1"
+        android:columnCount="2"
+        android:rowCount="2" >
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="@dimen/icon_tile_size"
+            android:layout_height="@dimen/icon_tile_size"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="@dimen/icon_tile_size"
+            android:layout_height="@dimen/icon_tile_size"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="@dimen/icon_tile_size"
+            android:layout_height="@dimen/icon_tile_size"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="@dimen/icon_tile_size"
+            android:layout_height="@dimen/icon_tile_size"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </GridLayout>
+
+    <!-- The height is set to half the height of the parent, which is 64 dip -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iconTabbedView"
+        android:paddingStart="16dip"
+        android:layout_toStartOf="@id/play_indicator">
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.54"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="@dimen/artist_text_size" />
+
+        <!-- The height is set to half the height of the parent, which is 64 dip -->
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@id/line1"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.26"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000"
+            android:textSize="@dimen/album_text_size"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/play_indicator"
+        style="@style/OverflowBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/duration"
+        android:layout_marginEnd="10dip"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_menu_moreoverflow_normal_holo_light" />
+
+</merge>

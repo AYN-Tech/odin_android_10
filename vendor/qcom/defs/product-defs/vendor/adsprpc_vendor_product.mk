@@ -1,0 +1,1 @@
+../../../proprietary/commonsys-intf/adsprpc_ship/adsprpc_vendor_product.mk

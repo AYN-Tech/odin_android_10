@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2007, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="4dp"
+    android:gravity="center_vertical" >
+
+    <!--
+        icon is used for albumart, the grabber in edit playlist mode, and
+        the playlist icon in the list of playlists
+    -->
+
+    <RelativeLayout
+        android:id="@+id/iconLayout"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dip" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:background="@drawable/folder" />
+    </RelativeLayout>
+
+    <!-- The height is set to half the height of the parent, which is 64 dip -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/menuLayout"
+        android:layout_toEndOf="@+id/iconLayout"
+        android:paddingStart="16dip" >
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- The height is set to half the height of the parent, which is 64 dip -->
+
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@id/line1"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.54"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLength="25"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical" >
+
+        <view class="com.android.music.TrackBrowserFragment$WaveView"
+            android:id="@+id/animView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toStartOf="@+id/play_indicator"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/play_indicator"
+            style="@style/OverflowBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_light" />
+    </RelativeLayout>
+
+</RelativeLayout>

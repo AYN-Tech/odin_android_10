@@ -1,0 +1,1 @@
+../../../proprietary/securemsm/config/gpqese_vendor_proprietary_product.mk

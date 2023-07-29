@@ -1,0 +1,1 @@
+../../../proprietary/dspservices_ship/chre_system_product.mk

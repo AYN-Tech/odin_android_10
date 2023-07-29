@@ -1,0 +1,1 @@
+../../../proprietary/display/config/display-product-proprietary.mk

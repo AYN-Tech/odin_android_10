@@ -1,0 +1,26 @@
+type ftmdaemon, domain;
+type ftmdaemon_exec, exec_type, vendor_file_type,file_type;
+
+# Started by init
+init_daemon_domain(ftmdaemon)
+userdebug_or_eng(`
+permissive ftmdaemon;
+
+')
+
+#fct_at_open_BT
+allow ftmdaemon hal_bluetooth_qti:binder call;
+allow ftmdaemon sysfs_diag:dir search;
+allow ftmdaemon sysfs_diag:file { read open };
+allow ftmdaemon hal_bluetooth_qti:binder transfer;
+
+allow hwservicemanager ftmdaemon:binder transfer;
+
+allow hal_bluetooth_qti ftmdaemon:binder call;
+
+#allow ftmdaemon self:capability dac_override;
+
+#fct_at_open_wifi
+allow ftmdaemon self:netlink_generic_socket read;
+allow ftmdaemon self:udp_socket create;
+allowxperm ftmdaemon ftmdaemon:socket ioctl { IOCTL_KGSL_TIMESTAMP_EVENT };

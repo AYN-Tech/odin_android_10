@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2016, The Linux Foundation. All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+      * Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+      * Redistributions in binary form must reproduce the above
+        copyright notice, this list of conditions and the following
+        disclaimer in the documentation and/or other materials provided
+        with the distribution.
+      * Neither the name of The Linux Foundation nor the names of its
+        contributors may be used to endorse or promote products derived
+        from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+  BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+  OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+  IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0">
+    <path
+        android:pathData="M8.41,10.02L14.8,6.33C14.71,6.15 14.71,5.88 14.71,5.7C14.71,4.17 15.88,3 17.41,3C18.94,3 20.11,4.17 20.11,5.7C20.11,7.23 18.94,8.4 17.41,8.4C16.69,8.4 16.06,8.13 15.61,7.68L9.22,11.37C9.31,11.55 9.31,11.82 9.31,12C9.31,12.18 9.31,12.45 9.22,12.63L15.61,16.41C16.06,15.96 16.69,15.69 17.41,15.69C18.85,15.69 20.02,16.86 20.02,18.3C20.02,19.74 18.85,20.91 17.41,20.91C15.97,20.91 14.8,19.74 14.8,18.3C14.8,18.12 14.8,17.94 14.89,17.67L8.5,13.89C8.05,14.34 7.42,14.61 6.7,14.61C5.17,14.61 4,13.44 4,11.91C4,10.38 5.08,9.3 6.61,9.3C7.33,9.3 7.96,9.57 8.41,10.02Z"
+        android:strokeWidth="1"
+        android:fillAlpha="0.87"
+        android:fillColor="#000000"
+        android:strokeColor="#00000000"/>
+</vector>

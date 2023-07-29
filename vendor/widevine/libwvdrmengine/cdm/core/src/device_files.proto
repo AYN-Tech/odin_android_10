@@ -1,0 +1,117 @@
+// ----------------------------------------------------------------------------
+// device_files.proto
+// ----------------------------------------------------------------------------
+// Copyright 2018 Google LLC. All Rights Reserved. This file and proprietary
+// source code may only be used and distributed under the Widevine Master
+// License Agreement.
+//
+// Description:
+//   Format of various files stored at the device.
+//
+syntax = "proto2";
+
+package video_widevine_client.sdk;
+
+// need this if we are using libprotobuf-cpp-2.3.0-lite
+option optimize_for = LITE_RUNTIME;
+
+message NameValue {
+  optional string name = 1;
+  optional string value = 2;
+}
+
+message DeviceCertificate {
+  optional bytes certificate = 1;
+  optional bytes wrapped_private_key = 2;
+}
+
+message License {
+  enum LicenseState {
+    ACTIVE = 1;
+    RELEASING = 2;
+  }
+
+  optional LicenseState state = 1;
+  optional bytes pssh_data = 2;
+  optional bytes license_request = 3;
+  optional bytes license = 4;
+  optional bytes renewal_request = 5;
+  optional bytes renewal = 6;
+  optional bytes release_server_url = 7;
+  optional int64 playback_start_time = 8 [default = 0];
+  optional int64 last_playback_time = 9 [default = 0];
+  repeated NameValue app_parameters = 10;
+  // This will be 0/missing if the grace period has not expired; otherwise it
+  // contains the playback_start_time we should use as an override.  This is
+  // ignored if there is no grace period.
+  optional int64 grace_period_end_time = 11 [default = 0];
+  optional bytes usage_entry = 12;
+  optional int64 usage_entry_number = 13;
+}
+
+message UsageInfo {
+  message ProviderSession {
+    optional bytes token = 1;
+    optional bytes license_request = 2;
+    optional bytes license = 3;
+    optional bytes key_set_id = 4;
+    optional bytes usage_entry = 5;
+    optional int64 usage_entry_number = 6;
+  }
+
+  repeated ProviderSession sessions = 1;
+}
+
+message HlsAttributes {
+  enum Method {
+    AES_128 = 1;
+    SAMPLE_AES = 2;
+  }
+  optional Method method = 1;
+  optional bytes media_segment_iv = 2;
+}
+
+message UsageTableInfo {
+  message UsageEntryInfo {
+    enum UsageEntryStorage {
+      LICENSE = 1;
+      USAGE_INFO = 2;
+      UNKNOWN = 3;
+    }
+
+    optional UsageEntryStorage storage = 1;
+    optional bytes key_set_id = 2;
+    optional bytes usage_info_file_name = 3; // hash of the app_id
+  }
+
+  optional bytes usage_table_header = 1;
+  repeated UsageEntryInfo usage_entry_info = 2;
+}
+
+message File {
+  enum FileType {
+    DEVICE_CERTIFICATE = 1;
+    LICENSE = 2;
+    USAGE_INFO = 3;
+    HLS_ATTRIBUTES = 4;
+    USAGE_TABLE_INFO = 5;
+  }
+
+  enum FileVersion {
+    VERSION_1 = 1;
+  }
+
+  optional FileType type = 1;
+  optional FileVersion version = 2 [default = VERSION_1];
+  optional DeviceCertificate device_certificate = 3;
+  optional License license = 4;
+  optional UsageInfo usage_info = 5;
+  optional HlsAttributes hls_attributes = 6;
+  optional UsageTableInfo usage_table_info = 7;
+}
+
+message HashedFile {
+  optional bytes file = 1;
+  // A raw (not hex-encoded) SHA256, taken over the bytes of 'file'.
+  optional bytes hash = 2;
+}

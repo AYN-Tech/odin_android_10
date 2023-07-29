@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2016, The Linux Foundation. All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+      * Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+      * Redistributions in binary form must reproduce the above
+        copyright notice, this list of conditions and the following
+        disclaimer in the documentation and/or other materials provided
+        with the distribution.
+      * Neither the name of The Linux Foundation nor the names of its
+        contributors may be used to endorse or promote products derived
+        from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+  BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+  OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+  IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Prefix of recording file name, like "Rec", default value is null -->
+    <string name="def_save_name_prefix" translatable="false">새 녹음</string>
+
+    <string name="save_dialog_title">녹음을 저장하시겠습니까?</string>
+    <string name="rename_dialog_title">이름 바꾸기</string>
+    <string name="rename_dialog_info_null">파일 이름은 비워둘 수 없습니다.</string>
+    <string name="rename_dialog_info_exists">파일 이름이 이미 존재합니다</string>
+    <string name="rename_dialog_info_length_limit">입력 한도에 도달했습니다.</string>
+    <string name="rename_dialog_save">저장</string>
+
+    <string name="delete_dialog_confirm">삭제</string>
+    <plurals name="delete_selection_message">
+        <item quantity="one">선택을 삭제하시겠습니까?</item>
+        <item quantity="other">선택을 삭제하시겠습니까?</item>
+    </plurals>
+    <string name="share_title">공유하다</string>
+    <string name="file_list_activity_label">녹음 목록</string>
+    <string name="file_list_empty">녹음 금지</string>
+    <string name="file_list_FM">라디오 녹음</string>
+    <string name="file_list_call">전화 녹음</string>
+    <string name="action_mode_menu_edit">편집하다</string>
+    <string name="action_mode_menu_share">공유하다</string>
+    <string name="action_mode_menu_delete">삭제</string>
+    <string name="action_mode_selected">%1$d개 항목 선택됨</string>
+    <string name="action_mode_select_all">모두 선택</string>
+    <string name="action_mode_deselect_all">모두 선택 취소</string>
+</resources>

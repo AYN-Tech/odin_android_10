@@ -1,0 +1,1 @@
+../../../proprietary/commonsys/sensors-see/build_config/sns_system_board.mk

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2014, The Linux Foundation. All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+     * Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above
+       copyright notice, this list of conditions and the following
+       disclaimer in the documentation and/or other materials provided
+       with the distribution.
+     * Neither the name of The Linux Foundation nor the names of its
+       contributors may be used to endorse or promote products derived
+       from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ -->
+<resources>
+
+    <!--
+         Default retry times when send mms failed, default value is 5,
+            other values are bigger than 1
+    -->
+    <integer name="def_retry_times">-1</integer>
+
+    <!-- default enable or disable wappush, default value is true, other value is false -->
+    <bool name="def_wap_push_enabled">true</bool>
+
+    <!--
+        default sms store postion, used in single SIM mode, 0: Phone; 1: SIM CARD,
+            others are invalid
+    -->
+    <string name="def_sms_store_value">0</string>
+
+    <!--
+        default sms store postion with card 1, used in dual SIM mode, 0: Phone; 1: SIM CARD,
+            others are invalid
+    -->
+    <string name="def_sms_store_card1_value">0</string>
+
+    <!--
+        default sms store postion with card 2, used in dual SIM mode, 0: Phone; 1: SIM CARD,
+            others are invalid
+    -->
+    <string name="def_sms_store_card2_value">0</string>
+
+    <!-- sms delivery reports enabled for Single model.default is false to off,true to on -->
+    <bool name="def_sms_delivery_reports">false</bool>
+
+    <!-- sms delivery reports enabled for Dual model.default is false to off,true to on -->
+    <bool name="def_sms_delivery_reports_slot1">false</bool>
+
+    <!-- sms delivery reports enabled for Dual model.default is false to off,true to on -->
+    <bool name="def_sms_delivery_reports_slot2">false</bool>
+
+    <!-- mms delivery reports enabled.default is true to on,false to off -->
+    <bool name="def_mms_delivery_reports">false</bool>
+
+    <!-- mms delivery reports enabled.default is true to on,false to off -->
+    <bool name="def_mms_delivery_reports_slot1">false</bool>
+
+    <!-- mms delivery reports enabled.default is true to on,false to off -->
+    <bool name="def_mms_delivery_reports_slot2">false</bool>
+
+    <!-- mms automatically retrieve messages enabled. default is true to on,false to off -->
+    <bool name="def_sms_auto_retrieval">true</bool>
+
+    <!-- check prefix or not. default is true to on,false to off -->
+    <bool name="customize_env_phone_checkidp">false</bool>
+
+    <!-- The default value for pref_key_ringtone -->
+    <string name="pref_defaultValue_notification_ringtone">"content://settings/system/notification_sound"</string>
+
+    <bool name="show_edit_smsc">false</bool>
+
+    <bool name="auto_delete_message">true</bool>
+
+    <bool name="enablePlugger">false</bool>
+
+    <bool name="def_hide_unknown_sender">false</bool>
+
+    <bool name="def_custom_preferences_settings">false</bool>
+
+    <string name="def_message_font_size_value">18</string>
+
+    <!-- enable to send a blank sms-->
+    <bool name="enable_send_blank_message">false</bool>
+
+    <bool name="def_show_mms_size">false</bool>
+
+    <bool name="def_enable_reset_smsc">false</bool>
+
+    <!-- automatically retrieve mms messages while roaming, default is false -->
+    <bool name="def_mms_roaming_auto_retrieval">false</bool>
+
+    <!-- Flag indicating whether OMA CP messages can be viewed -->
+    <bool name="enableOMACP">false</bool>
+
+    <!-- mms read reports enabled.true-On,false-Off,default is false. -->
+    <bool name="def_mms_read_reports">false</bool>
+
+    <!-- mms slide duration -->
+    <integer name="def_mms_slide_duration">2000</integer>
+
+    <bool name="def_mms_delay">false</bool>
+</resources>

@@ -1,0 +1,1 @@
+../../../proprietary/commonsys-intf/android-perf/config/perf-product-intf-vendor.mk

@@ -1,0 +1,1 @@
+../../../proprietary/chi-cdk/configs/camera_vendor_product.mk

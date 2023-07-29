@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2019 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<configuration description="This test plan excludes non-mainline related tests">
+
+    <!--Tests in CtsAppSecurityHostTestCases that are not testing mainline modules-->
+    <option name="plan" value="mts-exclude" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.AccessSerialNumberTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.AdoptableHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.AppOpsTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.AppSecurityTests" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.ApplicationVisibilityTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.AuthBoundKeyTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.BaseAppSecurityTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.CorruptApkTests" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.DeviceIdentifierTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.DirectBootHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.EphemeralTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.ExternalStorageHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.InstantAppUserTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.InstantCookieHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.IsolatedSplitsTests" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.KeySetHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.ListeningPortsTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.MajorVersionTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.OverlayHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.PackageResolutionHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.PackageVisibilityTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.PermissionsHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.PkgInstallSignatureVerificationTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.PrivilegedUpdateTests" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.SharedUserIdTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.SplitTests" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.StorageHostTest" />
+    <option name="compatibility:exclude-filter" value="CtsAppSecurityHostTestCases android.appsecurity.cts.UseEmbeddedDexTest" />
+
+    <!--Tests from CTS known faliures-->
+
+    <!-- b/38224690 -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.NativeEncoderTest" />
+
+    <!-- b/38280830 -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.VideoDecoderPerfTest#testVp8Goog0Perf1280x0720" />
+
+    <!-- Exclude tests that are not related to media mainlines -->
+    <option name="compatibility:module-arg" value="CtsMediaTestCases:exclude-annotation:android.media.cts.NonMediaMainlineTest" />
+
+    <!-- DocumentsUITests is only used to get coverage on virtual devices. -->
+    <option name="compatibility:exclude-filter" value="DocumentsUITests" />
+
+    <!-- Exclude flaky timezone data tests. b/144301036 -->
+    <option name="compatibility:exclude-filter" value="CtsIcuTestCases android.icu.dev.test.util.ICUServiceThreadTest#Test05_ConcurrentEverything" />
+
+    <!-- b/142978584: Flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsNetTestCases android.net.cts.TrafficStatsTest#testTrafficStatsForLocalhost" />
+
+    <!-- b/144859812: Flaky test -->
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.FileCopyUiTest#testCopyDocuments_InternalStorage" />
+
+    <!-- b/144578694: the tests are not for current train -->
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.DialogFragmentTest#testCreateDialog_textInputEditText_shouldNotTruncateOnLargeDensity" />
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.DialogFragmentTest#testCreateDialog_textInputEditText_shouldNotTruncateOnLargerDensity" />
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.DialogFragmentTest#testCreateDialog_textInputEditText_shouldNotTruncateOnLargestDensity" />
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.DialogFragmentTest#testCreateDirectoryFragmentShows_textInputEditText_shouldNotTruncateOnLandscape" />
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.files.ActionHandlerTest#testDocumentPicked_Recent_ManagesApks" />
+    <option name="compatibility:exclude-filter" value="DocumentsUIGoogleTests com.android.documentsui.RecentsLoaderTests#testContentsUpdate_observable" />
+
+    <!-- b/144850069: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaStressTestCases android.mediastress.cts.H264R1080pAacLongPlayerTest#testPlay00" />
+
+    <!-- b/144656329: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.EncodeDecodeTest#testEncodeDecodeVideoFromBufferToBufferQVGA0" />
+
+    <!-- b/144590142: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.DecoderTest#testVP8Decode640x360" />
+
+    <!-- b/144590245: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.VideoEncoderTest#testGoogH264FlexNearMaxMax" />
+
+    <!-- b/142976793: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.DecoderTest#testDecodeMonoOggMp4" />
+
+    <!-- b/144798271: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.MediaCodecCapabilitiesTest#testAvcHigh31" />
+
+    <!-- b/144590380: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.NativeMediaDrmClearkeyTest#testClearKeyPlaybackCenc2" />
+
+    <!-- b/143245993: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.NativeMediaDrmClearkeyTest#testPssh" />
+
+    <!-- b/142965402: MTS flaky test -->
+    <option name="compatibility:exclude-filter" value="CtsMediaTestCases android.media.cts.MediaCodecCapabilitiesTest#testGetMaxSupportedInstances" />
+</configuration>
+

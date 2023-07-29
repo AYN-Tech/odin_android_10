@@ -1,0 +1,1 @@
+../../../../codeaurora/commonsys/packages/apps/SnapdragonCamera/app_snapcam_system_product.mk

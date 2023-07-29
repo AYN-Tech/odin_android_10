@@ -1,0 +1,1 @@
+../../../proprietary/commonsys-intf/sensors-see/build_config/sns_intf_system_product.mk

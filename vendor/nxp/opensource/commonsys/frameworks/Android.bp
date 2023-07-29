@@ -1,0 +1,22 @@
+//#######################################
+// com.nxp.nfc.nq - library
+//#######################################
+java_library {
+    name: "com.nxp.nfc.nq",
+    installable: true,
+    required: ["com.nxp.nfc.nq.xml"],
+
+    srcs: [
+        "com/**/I*.aidl",
+        "com/**/*.java",
+        "android/**/*.java",
+    ],
+}
+
+// ====  permissions ========================
+prebuilt_etc {
+    name: "com.nxp.nfc.nq.xml",
+    src: "com.nxp.nfc.nq.xml",
+    // Install to /system/etc/permissions
+    sub_dir: "permissions",
+}

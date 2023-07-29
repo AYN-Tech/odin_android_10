@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+    * Neither the name of The Linux Foundation nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<!-- The xml contains Qti specific resource strings neede for any value added features. -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title of the IMS to CS redial dialog -->
+    <string name="cs_redial_option">Redial Option</string>
+    <!-- Message text of the IMS to CS redial dialog -->
+    <string name="cs_redial_msg">Unable to make an IMS Video call, try to dial as non-IMS voice call
+?</string>
+    <!-- Yes option of the IMS to CS redial dialog -->
+    <string name="cs_redial_yes">Yes</string>
+    <!-- No option of the IMS to CS redial dialog -->
+    <string name="cs_redial_no">No</string>
+    <string name="qti_description_target_deflect">Call Deflect</string>
+
+    <string name="qti_ims_hideMeText_unselected">Hide Me</string>
+    <string name="qti_ims_hideMeText_selected">Show Me</string>
+    <string name="qti_ims_defaultImage_fallback">Using default image</string>
+    <string name="qti_description_transfer">Call Transfer</string>
+    <!-- Text for the onscreen "blind transfer" button -->
+    <string name="qti_ims_onscreenBlindTransfer">Blind Transfer</string>
+    <!-- Text for the onscreen "assured transfer" button -->
+    <string name="qti_ims_onscreenAssuredTransfer">Assured Transfer</string>
+    <!-- Text for the onscreen "consultative transfer" button -->
+    <string name="qti_ims_onscreenConsultativeTransfer">Consultative Transfer</string>
+    <string name="dialpad_label">Show dialpad"</string>
+
+    <!-- Option to add participant -->
+    <string name="add_participant_option_msg">Add participant</string>
+    <string name="select_your_option">Select your option:</string>
+    <string name="select_your_4g_dialer_cancel_option">Cancel</string>
+    <string name="conference_uri_dialer_option">1. Conference URI Dialer</string>
+    <string name="conference_4g_dialer_option">2. 4G Conference Dialer</string>
+
+    <string name="video_rx_label">Video Rx</string>
+    <string name="video_tx_label">Video Tx</string>
+    <string name="modify_call_label">Modify Call</string>
+    <string name="notification_requesting_video_tx_call">"Incoming video tx request"</string>
+    <string name="notification_requesting_video_rx_call">"Incoming video rx request"</string>
+    <string name="cancel_modify_call_label">Cancel Modify Call</string>
+
+    <!-- Text for the PIP mode button -->
+    <string name="pipModeLabel">PIP Mode</string>
+    <!-- Text for accepting incoming call with TIR presentation buttons -->
+    <string name="accept_call_with_tir_restricted_label">Accept TIR Restricted</string>
+    <string name="accept_call_with_tir_unrestricted_label">Accept TIR Unrestricted</string>
+
+    <!--Bottom Sheet resources.String arrays with same format should be introduced
+        for each feature/option to be shown on the bottomsheet -->
+    <!--
+        <item>Options to be shown on sheet</item>
+        <item>Visibility</item>
+     -->
+    <string-array name="manageConference">
+       <item>@string/manageConferenceLabel</item>
+       <item>false</item>
+    </string-array>
+    <string-array name="pipMode">
+       <item>@string/pipModeLabel</item>
+       <item>false</item>
+    </string-array>
+    <string-array name="hide_me">
+       <item>@string/qti_ims_hideMeText_unselected</item>
+       <item>false</item>
+    </string-array>
+    <string-array name="deflect">
+       <item>@string/qti_description_target_deflect</item>
+       <item>false</item>
+    </string-array>
+    <string-array name="transfer">
+       <item>@string/qti_description_transfer</item>
+       <item>false</item>
+    </string-array>
+    <string-array name="show_dialpad">
+       <item>@string/dialpad_label</item>
+       <item>false</item>
+    </string-array>
+
+    <string-array name="add_participant_option">
+       <item>@string/add_participant_option_msg</item>
+       <item>false</item>
+    </string-array>
+    <string-array name="video_rx">
+       <item>@string/video_rx_label</item>
+       <item>false</item>
+    </string-array>
+
+    <string-array name="video_tx">
+       <item>@string/video_tx_label</item>
+       <item>false</item>
+    </string-array>
+
+    <string-array name="modify_call">
+       <item>@string/modify_call_label</item>
+       <item>false</item>
+    </string-array>
+
+    <string-array name="cancel_modify_call">
+       <item>@string/cancel_modify_call_label</item>
+       <item>false</item>
+    </string-array>
+
+    <string-array name="accept_call_with_tir_restricted">
+        <item>@string/accept_call_with_tir_restricted_label</item>
+        <item>false</item>
+    </string-array>
+
+    <string-array name="accept_call_with_tir_unrestricted">
+        <item>@string/accept_call_with_tir_unrestricted_label</item>
+        <item>false</item>
+    </string-array>
+
+    <!-- array of all the options to ensure mapping-->
+    <array name="bottom_sheet_more_options">
+       <item>@array/manageConference</item>
+       <item>@array/hide_me</item>
+       <item>@array/deflect</item>
+       <item>@array/transfer</item>
+       <item>@array/show_dialpad</item>
+       <item>@array/add_participant_option</item>
+       <item>@array/video_rx</item>
+       <item>@array/video_tx</item>
+       <item>@array/modify_call</item>
+       <item>@array/cancel_modify_call</item>
+       <item>@array/pipMode</item>
+       <item>@array/accept_call_with_tir_restricted</item>
+       <item>@array/accept_call_with_tir_unrestricted</item>
+    </array>
+
+    <!-- In-call screen: Modify Call Options for IMS call -->
+    <string name="modify_call_option_title" translatable="false">Which type of call?</string>
+    <string name="modify_call_option_vt" translatable="false">Video bidirectional</string>
+    <string name="modify_call_option_vt_tx" translatable="false">Video Transmit</string>
+    <string name="modify_call_option_vt_rx" translatable="false">Video Receive</string>
+    <string name="modify_call_option_voice" translatable="false">Voice Only</string>
+    <string name="modify_call_option_screen_share" translatable="false">Screen Sharing</string>
+    <string name="cancel_modify_call_title">Cancel modify call?</string>
+    <string name="cancel_upgrade">Cancel Upgrade</string>
+    <string name="not_cancel">Not Cancel</string>
+
+    <!-- Displayed in the answer call screen for incoming video rx calls. -->
+    <string name="incoming_video_rx_call">Video Receive call from</string>
+
+    <!-- Displayed in the answer call screen for incoming video rx calls over Wi-F. -->
+    <string name="incoming_wifi_video_rx_call">Wi-Fi video receive call from</string>
+
+    <!-- Displayed in the answer call screen for incoming video tx calls. -->
+    <string name="incoming_video_tx_call">Video Transmit call from</string>
+
+    <!-- Displayed in the answer call screen for incoming video tx calls over Wi-F. -->
+    <string name="incoming_wifi_video_tx_call">Wi-Fi video transmit call from</string>
+
+    <string name="call_state_dialing">Dialing</string>
+    <string name="call_state_holding">Holding</string>
+    <string name="call_state_active">Active</string>
+    <string name="call_state_unknown">Unknown</string>
+    <string name="call_state_disconnecting">Disconnecting</string>
+    <string name="call_state_disconnected">Disconnected</string>
+
+    <!-- Pop up menu options for picture mode -->
+    <string name="video_call_picture_mode_menu_title">Choose Picture Mode</string>
+    <string name="video_call_picture_mode_preview_video">Camera Preview</string>
+    <string name="video_call_picture_mode_incoming_video">Incoming Video</string>
+    <string name="video_call_picture_mode_cancel_option">Cancel</string>
+    <string name="video_call_picture_mode_save_option">Save</string>
+</resources>

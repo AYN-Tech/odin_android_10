@@ -1,0 +1,1 @@
+../../../proprietary/sensors-see/build_config/sns_vendor_product.mk

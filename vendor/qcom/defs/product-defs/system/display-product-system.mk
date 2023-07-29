@@ -1,0 +1,1 @@
+../../../opensource/commonsys-intf/display/config/display-product-system.mk

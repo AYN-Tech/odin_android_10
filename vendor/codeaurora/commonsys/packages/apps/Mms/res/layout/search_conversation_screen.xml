@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions are
+* met:
+* * Redistributions of source code must retain the above copyright
+* notice, this list of conditions and the following disclaimer.
+* * Redistributions in binary form must reproduce the above
+* copyright notice, this list of conditions and the following
+* disclaimer in the documentation and/or other materials provided
+* with the distribution.
+* * Neither the name of The Linux Foundation nor the names of its
+* contributors may be used to endorse or promote products derived
+* from this software without specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+* WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+* ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+* BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+* CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+* SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+* BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+* WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+* OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+* IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_text_height"
+        android:background="@null"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:id="@+id/search_box_expanded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/search_back_button"
+                android:layout_width="@dimen/search_box_icon_size"
+                android:layout_height="@dimen/search_box_icon_size"
+                android:layout_margin="@dimen/search_box_navigation_icon_margin"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back_24dp"
+                android:tint="@color/embedded_hint_text_color" />
+
+            <EditText
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/search_box_icon_size"
+                android:layout_marginLeft="@dimen/search_box_text_left_margin"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fontFamily="@string/search_hint"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textFilter"
+                android:singleLine="true"
+                android:textColor="@color/searchbox_input_color"
+                android:textColorHint="@color/searchbox_hint_color"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/search_text_size" />
+
+            <ImageView
+                android:id="@+id/search_close_button"
+                android:layout_width="@dimen/search_box_close_icon_size"
+                android:layout_height="@dimen/search_box_close_icon_size"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:padding="@dimen/search_box_close_icon_padding"
+                android:src="@drawable/ic_close_dk"
+                android:tint="@color/embedded_hint_text_color" />
+
+        </LinearLayout>
+    </Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:clipToPadding="false"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>

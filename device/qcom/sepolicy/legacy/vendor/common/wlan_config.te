@@ -1,0 +1,9 @@
+type wlan_config, domain;
+type wlan_config_exec, exec_type, vendor_file_type,file_type;
+
+# Started by init
+init_daemon_domain(wlan_config)
+userdebug_or_eng(`
+permissive wlan_config;
+')
+

@@ -1,0 +1,1 @@
+../../../proprietary/commonsys/display/config/display-product-system-proprietary.mk
