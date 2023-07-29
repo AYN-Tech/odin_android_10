@@ -1,0 +1,22 @@
+cc_binary {
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libcutils",
+		"libbinder",
+		"libdl",
+		"libm",
+    ],
+    srcs: [
+        "rsinput.c",
+        "service.c",
+		"BinderServiceP/BinderServiceP.cpp",
+    ],
+
+    name: "pservice",
+	local_include_dirs: [
+		"include",
+		"BinderServiceP",
+	],
+    vendor: false,
+}
