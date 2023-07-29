@@ -1,0 +1,18 @@
+<!--
+ * Copyright (c) 2017-2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<resources>
+    <string name="app_name">알람 끄기</string>
+    <string name="poweron_yes">크 랭크인</string>
+    <string name="poweron_no">컴퓨터 끄기</string>
+    <string name="power_on_off_text">켜줄까 꺼줄까?</string>
+    <string name="firing_message">알람 시간이 됐어요!</string>
+    <string name="snooze">수면</string>
+    <string name="dismiss">닫기</string>
+    <string name="permlab_power_off_alarm">알람 끄기</string>
+    <string name="permdesc_power_off_alarm">끄기 알람 시간 설정 및 지우기 (끄기 알람이 꺼진 상태에서 휴대전화를 깨울 수 있음)</string>
+</resources>
